@@ -223,6 +223,20 @@ export default function Index() {
                   <dt className="font-semibold text-foreground">Gap</dt>
                   <dd className="text-muted-foreground">8px (0.5rem)</dd>
                 </div>
+                <div>
+                  <dt className="font-semibold text-foreground">
+                    Transition Duration
+                  </dt>
+                  <dd className="text-muted-foreground">300ms</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">Easing</dt>
+                  <dd className="text-muted-foreground">ease-out</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">Hover Scale</dt>
+                  <dd className="text-muted-foreground">105%</dd>
+                </div>
               </dl>
             </div>
           </section>
