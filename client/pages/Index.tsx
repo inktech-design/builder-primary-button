@@ -237,6 +237,20 @@ export default function Index() {
                   <dt className="font-semibold text-foreground">Hover Scale</dt>
                   <dd className="text-muted-foreground">105%</dd>
                 </div>
+                <div>
+                  <dt className="font-semibold text-foreground">
+                    Corner Style
+                  </dt>
+                  <dd className="text-muted-foreground">
+                    Squircle (iOS-style)
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">
+                    Corner Smoothing
+                  </dt>
+                  <dd className="text-muted-foreground">60%</dd>
+                </div>
               </dl>
             </div>
           </section>
