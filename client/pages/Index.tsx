@@ -177,10 +177,10 @@ export default function Index() {
               </div>
 
               <div className="bg-card p-6 rounded-lg border text-center">
-                <h3 className="font-semibold mb-3">Color Transitions</h3>
-                <Button state="hover">Hover State</Button>
+                <h3 className="font-semibold mb-3">Smooth Corners</h3>
+                <Button>iOS-Style</Button>
                 <p className="text-xs text-muted-foreground mt-2">
-                  300ms color transitions
+                  Squircle corners (60% smoothing)
                 </p>
               </div>
             </div>
