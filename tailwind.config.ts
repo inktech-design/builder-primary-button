@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        button: {
+          primary: {
+            DEFAULT: "var(--button-primary)",
+            hover: "var(--button-primary-hover)",
+            pressed: "var(--button-primary-pressed)",
+            disabled: "var(--button-primary-disabled)",
+            loading: "var(--button-primary-loading)",
+          },
+          text: {
+            primary: "var(--button-text-primary)",
+            "primary-hover": "var(--button-text-primary-hover)",
+            "primary-pressed": "var(--button-text-primary-pressed)",
+            "primary-disabled": "var(--button-text-primary-disabled)",
+          },
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
