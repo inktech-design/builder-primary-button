@@ -146,6 +146,46 @@ export default function Index() {
             </div>
           </section>
 
+          {/* Animation Showcase */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-6 text-foreground">
+              Animation Features
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+              <div className="bg-card p-6 rounded-lg border text-center">
+                <h3 className="font-semibold mb-3">Hover Scale</h3>
+                <Button>Hover Me</Button>
+                <p className="text-xs text-muted-foreground mt-2">
+                  105% scale on hover
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border text-center">
+                <h3 className="font-semibold mb-3">Active Press</h3>
+                <Button>Press Me</Button>
+                <p className="text-xs text-muted-foreground mt-2">
+                  95% scale when pressed
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border text-center">
+                <h3 className="font-semibold mb-3">Smooth Loading</h3>
+                <Button loading>Loading</Button>
+                <p className="text-xs text-muted-foreground mt-2">
+                  Smooth spinner animation
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border text-center">
+                <h3 className="font-semibold mb-3">Color Transitions</h3>
+                <Button state="hover">Hover State</Button>
+                <p className="text-xs text-muted-foreground mt-2">
+                  300ms color transitions
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Design Tokens */}
           <section>
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
