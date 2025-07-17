@@ -95,7 +95,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const finalState = loading ? "loading" : disabled ? "disabled" : state;
 
-            return (
+    return (
       <Squircle
         cornerRadius={16}
         cornerSmoothing={0.6}
@@ -107,7 +107,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onBlur={props.onBlur}
         disabled={disabled || loading}
         style={{
-          cursor: disabled || loading ? 'not-allowed' : 'pointer',
+          cursor: disabled || loading ? "not-allowed" : "pointer",
           ...props.style,
         }}
       >
@@ -137,8 +137,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <div className="transition-all duration-300 ease-out">
             {loading ? <LoadingSpinner /> : <PlusIcon />}
           </div>
-                )}
-        </button>
+        )}
       </Squircle>
     );
   },
