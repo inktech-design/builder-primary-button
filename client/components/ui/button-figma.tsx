@@ -89,6 +89,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       iconOnly = false,
       disabled,
       children,
+      style,
       ...props
     },
     ref,
@@ -96,55 +97,51 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const finalState = loading ? "loading" : disabled ? "disabled" : state;
 
     return (
-      <Squircle
-        cornerRadius={16}
-        cornerSmoothing={0.6}
-        className={cn(buttonVariants({ state: finalState }), className)}
-        style={{
-          cursor: disabled || loading ? "not-allowed" : "pointer",
-          ...props.style,
-        }}
-        {...({
-          as: "button",
-          type: props.type || "button",
-          disabled: disabled || loading,
-          onClick: props.onClick,
-          onMouseEnter: props.onMouseEnter,
-          onMouseLeave: props.onMouseLeave,
-          onFocus: props.onFocus,
-          onBlur: props.onBlur,
-          ref,
-          ...props,
-        } as any)}
+      <button
+        className="relative overflow-hidden focus:outline-none"
+        ref={ref}
+        disabled={disabled || loading}
+        style={style}
+        {...props}
       >
-        {/* Left Icon */}
-        {leftIcon && !iconOnly && (
-          <div className="transition-all duration-300 ease-out">
-            {loading ? <LoadingSpinner /> : <PlusIcon />}
-          </div>
-        )}
+        <Squircle
+          cornerRadius={16}
+          cornerSmoothing={0.6}
+          className={cn(
+            buttonVariants({ state: finalState }),
+            "w-full h-full",
+            className,
+          )}
+        >
+          {/* Left Icon */}
+          {leftIcon && !iconOnly && (
+            <div className="transition-all duration-300 ease-out">
+              {loading ? <LoadingSpinner /> : <PlusIcon />}
+            </div>
+          )}
 
-        {/* Content */}
-        {!iconOnly && (
-          <span className="px-1 sm:px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6 transition-all duration-300 ease-out">
-            {children}
-          </span>
-        )}
+          {/* Content */}
+          {!iconOnly && (
+            <span className="px-1 sm:px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6 transition-all duration-300 ease-out">
+              {children}
+            </span>
+          )}
 
-        {/* Right Icon */}
-        {rightIcon && !iconOnly && (
-          <div className="transition-all duration-300 ease-out">
-            {loading ? null : <PlusIcon />}
-          </div>
-        )}
+          {/* Right Icon */}
+          {rightIcon && !iconOnly && (
+            <div className="transition-all duration-300 ease-out">
+              {loading ? null : <PlusIcon />}
+            </div>
+          )}
 
-        {/* Icon Only Mode */}
-        {iconOnly && (
-          <div className="transition-all duration-300 ease-out">
-            {loading ? <LoadingSpinner /> : <PlusIcon />}
-          </div>
-        )}
-      </Squircle>
+          {/* Icon Only Mode */}
+          {iconOnly && (
+            <div className="transition-all duration-300 ease-out">
+              {loading ? <LoadingSpinner /> : <PlusIcon />}
+            </div>
+          )}
+        </Squircle>
+      </button>
     );
   },
 );
