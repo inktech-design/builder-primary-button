@@ -30,7 +30,7 @@ const PlusIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-6 h-6"
+    className="w-5 h-5 sm:w-6 sm:h-6"
   >
     <path
       d="M12 5V19M5 12H19"
@@ -44,7 +44,7 @@ const PlusIcon = () => (
 
 const LoadingSpinner = () => (
   <svg
-    className="animate-spin w-6 h-6"
+    className="animate-spin w-5 h-5 sm:w-6 sm:h-6"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
         {/* Content */}
         {!iconOnly && (
-          <span className="px-2 text-base font-medium leading-6">
+          <span className="px-1 sm:px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6">
             {children}
           </span>
         )}
