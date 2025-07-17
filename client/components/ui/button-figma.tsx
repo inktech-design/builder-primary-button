@@ -47,13 +47,10 @@ const PlusIcon = () => (
 
 const LoadingSpinner = () => (
   <svg
-    className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 ease-out"
+    className="w-5 h-5 sm:w-6 sm:h-6 animate-smooth-spin transition-opacity duration-300 ease-out"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
-    style={{
-      animation: "spin 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-    }}
   >
     <circle
       className="opacity-25 transition-opacity duration-300"
