@@ -32,7 +32,7 @@ const PlusIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-5 h-5 sm:w-6 sm:h-6"
+    className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 ease-out"
   >
     <path
       d="M12 5V19M5 12H19"
@@ -40,6 +40,7 @@ const PlusIcon = () => (
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="transition-all duration-300 ease-out"
     />
   </svg>
 );
