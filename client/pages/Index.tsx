@@ -16,12 +16,12 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+      <div className="container mx-auto px-4 py-8 md:py-16">
+        <div className="text-center mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-foreground">
             Pixel Perfect
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-2">
             A modern button component system built from Figma design tokens.
             Experience all button states with perfect pixel precision.
           </p>
@@ -34,7 +34,7 @@ export default function Index() {
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
               Button States
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 items-center">
               <div className="text-center space-y-3">
                 <Button state="default">Button</Button>
                 <p className="text-sm text-muted-foreground">Default</p>
@@ -67,7 +67,7 @@ export default function Index() {
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
               Interactive Examples
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               <div className="bg-card p-6 rounded-lg border">
                 <h3 className="font-semibold mb-4">Standard Button</h3>
                 <Button
@@ -137,7 +137,7 @@ export default function Index() {
               Responsive Design
             </h2>
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-4 items-center">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 items-center">
                 <Button className="w-auto">Auto Width</Button>
                 <Button className="w-32">Fixed Width</Button>
                 <Button className="w-full max-w-sm">Responsive Width</Button>
@@ -151,7 +151,7 @@ export default function Index() {
               Design Specifications
             </h2>
             <div className="bg-card p-6 rounded-lg border">
-              <dl className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+              <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-sm">
                 <div>
                   <dt className="font-semibold text-foreground">Height</dt>
                   <dd className="text-muted-foreground">56px (3.5rem)</dd>
