@@ -95,13 +95,18 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const finalState = loading ? "loading" : disabled ? "disabled" : state;
 
-    return (
-      <button
-        className={cn(buttonVariants({ state: finalState }), className)}
-        ref={ref}
-        disabled={disabled || loading}
-        {...props}
+        return (
+      <Squircle
+        cornerRadius={16}
+        cornerSmoothing={0.6}
+        asChild
       >
+        <button
+          className={cn(buttonVariants({ state: finalState }), className)}
+          ref={ref}
+          disabled={disabled || loading}
+          {...props}
+        >
         {/* Left Icon */}
         {leftIcon && !iconOnly && (
           <div className="transition-all duration-300 ease-out">
