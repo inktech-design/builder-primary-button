@@ -19,7 +19,10 @@ export default function Index() {
       <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-foreground">
-            Pixel Perfect
+            <div>
+              Primary Button
+              <br />
+            </div>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-2">
             A modern button component with iOS-style smooth corners and fluid
