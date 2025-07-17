@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
+import { Squircle } from "corner-smoothing";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap text-base font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none font-inter h-12 sm:h-14 min-w-12 sm:min-w-14 px-2 sm:px-3 py-3 sm:py-4 rounded-2xl text-sm sm:text-base transition-all duration-300 ease-out transform-gpu",
