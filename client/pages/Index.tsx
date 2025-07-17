@@ -234,8 +234,12 @@ export default function Index() {
                   <dd className="text-muted-foreground">ease-out</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-foreground">Hover Scale</dt>
-                  <dd className="text-muted-foreground">105%</dd>
+                  <dt className="font-semibold text-foreground">
+                    Hover Effects
+                  </dt>
+                  <dd className="text-muted-foreground">
+                    Color & shadow transitions
+                  </dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-foreground">
