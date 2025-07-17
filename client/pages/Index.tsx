@@ -1,61 +1,191 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button-figma";
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
+  const [loadingStates, setLoadingStates] = useState<{
+    [key: string]: boolean;
+  }>({});
 
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
+  const handleButtonClick = (buttonId: string) => {
+    setLoadingStates((prev) => ({ ...prev, [buttonId]: true }));
+    setTimeout(() => {
+      setLoadingStates((prev) => ({ ...prev, [buttonId]: false }));
+    }, 2000);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+            Pixel Perfect
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            A modern button component system built from Figma design tokens.
+            Experience all button states with perfect pixel precision.
+          </p>
+        </div>
+
+        {/* Button States Showcase */}
+        <div className="space-y-12">
+          {/* Default States */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-6 text-foreground">
+              Button States
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+              <div className="text-center space-y-3">
+                <Button state="default">Button</Button>
+                <p className="text-sm text-muted-foreground">Default</p>
+              </div>
+
+              <div className="text-center space-y-3">
+                <Button state="hover">Button</Button>
+                <p className="text-sm text-muted-foreground">Hover</p>
+              </div>
+
+              <div className="text-center space-y-3">
+                <Button state="pressed">Button</Button>
+                <p className="text-sm text-muted-foreground">Pressed</p>
+              </div>
+
+              <div className="text-center space-y-3">
+                <Button disabled>Button</Button>
+                <p className="text-sm text-muted-foreground">Disabled</p>
+              </div>
+
+              <div className="text-center space-y-3">
+                <Button loading>Button</Button>
+                <p className="text-sm text-muted-foreground">Loading</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Interactive Buttons */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-6 text-foreground">
+              Interactive Examples
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-card p-6 rounded-lg border">
+                <h3 className="font-semibold mb-4">Standard Button</h3>
+                <Button
+                  loading={loadingStates.standard}
+                  onClick={() => handleButtonClick("standard")}
+                >
+                  Click Me
+                </Button>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <h3 className="font-semibold mb-4">Left Icon Only</h3>
+                <Button
+                  leftIcon={true}
+                  rightIcon={false}
+                  loading={loadingStates.leftIcon}
+                  onClick={() => handleButtonClick("leftIcon")}
+                >
+                  Add Item
+                </Button>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <h3 className="font-semibold mb-4">Right Icon Only</h3>
+                <Button
+                  leftIcon={false}
+                  rightIcon={true}
+                  loading={loadingStates.rightIcon}
+                  onClick={() => handleButtonClick("rightIcon")}
+                >
+                  Continue
+                </Button>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <h3 className="font-semibold mb-4">Icon Only</h3>
+                <Button
+                  iconOnly={true}
+                  loading={loadingStates.iconOnly}
+                  onClick={() => handleButtonClick("iconOnly")}
+                  className="w-14"
+                />
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <h3 className="font-semibold mb-4">No Icons</h3>
+                <Button
+                  leftIcon={false}
+                  rightIcon={false}
+                  loading={loadingStates.noIcons}
+                  onClick={() => handleButtonClick("noIcons")}
+                >
+                  Text Only
+                </Button>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border">
+                <h3 className="font-semibold mb-4">Disabled</h3>
+                <Button disabled>Disabled</Button>
+              </div>
+            </div>
+          </section>
+
+          {/* Size Variations */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-6 text-foreground">
+              Responsive Design
+            </h2>
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-4 items-center">
+                <Button className="w-auto">Auto Width</Button>
+                <Button className="w-32">Fixed Width</Button>
+                <Button className="w-full max-w-sm">Responsive Width</Button>
+              </div>
+            </div>
+          </section>
+
+          {/* Design Tokens */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-6 text-foreground">
+              Design Specifications
+            </h2>
+            <div className="bg-card p-6 rounded-lg border">
+              <dl className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+                <div>
+                  <dt className="font-semibold text-foreground">Height</dt>
+                  <dd className="text-muted-foreground">56px (3.5rem)</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">
+                    Border Radius
+                  </dt>
+                  <dd className="text-muted-foreground">16px (1rem)</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">Padding</dt>
+                  <dd className="text-muted-foreground">
+                    16px vertical, 12px horizontal
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">Font</dt>
+                  <dd className="text-muted-foreground">
+                    Inter, 16px, 500 weight
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">Icon Size</dt>
+                  <dd className="text-muted-foreground">24px (1.5rem)</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-foreground">Gap</dt>
+                  <dd className="text-muted-foreground">8px (0.5rem)</dd>
+                </div>
+              </dl>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
