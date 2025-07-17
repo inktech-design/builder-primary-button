@@ -100,16 +100,22 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         cornerRadius={16}
         cornerSmoothing={0.6}
         className={cn(buttonVariants({ state: finalState }), className)}
-        onClick={props.onClick}
-        onMouseEnter={props.onMouseEnter}
-        onMouseLeave={props.onMouseLeave}
-        onFocus={props.onFocus}
-        onBlur={props.onBlur}
-        disabled={disabled || loading}
         style={{
           cursor: disabled || loading ? "not-allowed" : "pointer",
           ...props.style,
         }}
+        {...({
+          as: "button",
+          type: props.type || "button",
+          disabled: disabled || loading,
+          onClick: props.onClick,
+          onMouseEnter: props.onMouseEnter,
+          onMouseLeave: props.onMouseLeave,
+          onFocus: props.onFocus,
+          onBlur: props.onBlur,
+          ref,
+          ...props,
+        } as any)}
       >
         {/* Left Icon */}
         {leftIcon && !iconOnly && (
