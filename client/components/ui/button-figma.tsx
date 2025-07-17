@@ -105,20 +105,32 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {/* Left Icon */}
-        {leftIcon && !iconOnly && (loading ? <LoadingSpinner /> : <PlusIcon />)}
+        {leftIcon && !iconOnly && (
+          <div className="transition-all duration-300 ease-out">
+            {loading ? <LoadingSpinner /> : <PlusIcon />}
+          </div>
+        )}
 
         {/* Content */}
         {!iconOnly && (
-          <span className="px-1 sm:px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6">
+          <span className="px-1 sm:px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6 transition-all duration-300 ease-out">
             {children}
           </span>
         )}
 
         {/* Right Icon */}
-        {rightIcon && !iconOnly && (loading ? null : <PlusIcon />)}
+        {rightIcon && !iconOnly && (
+          <div className="transition-all duration-300 ease-out">
+            {loading ? null : <PlusIcon />}
+          </div>
+        )}
 
         {/* Icon Only Mode */}
-        {iconOnly && (loading ? <LoadingSpinner /> : <PlusIcon />)}
+        {iconOnly && (
+          <div className="transition-all duration-300 ease-out">
+            {loading ? <LoadingSpinner /> : <PlusIcon />}
+          </div>
+        )}
       </button>
     );
   },
