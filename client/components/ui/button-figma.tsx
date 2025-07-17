@@ -78,7 +78,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
-      variant,
       state,
       loading = false,
       leftIcon = true,
@@ -94,10 +93,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button
-        className={cn(
-          buttonVariants({ variant, state: finalState }),
-          className,
-        )}
+        className={cn(buttonVariants({ state: finalState }), className)}
         ref={ref}
         disabled={disabled || loading}
         {...props}
