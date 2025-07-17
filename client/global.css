@@ -54,6 +54,18 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Button Design System Colors */
+    --button-primary: #15161e;
+    --button-primary-hover: #262836;
+    --button-primary-pressed: #15161e;
+    --button-primary-disabled: #edeef2;
+    --button-primary-loading: #edeef2;
+
+    --button-text-primary: #f6f6f9;
+    --button-text-primary-hover: #f6f6f9;
+    --button-text-primary-pressed: #edeef2;
+    --button-text-primary-disabled: #9fa3bc;
   }
 
   .dark {
@@ -92,6 +104,18 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Button Design System Colors - Dark Mode (same colors) */
+    --button-primary: #15161e;
+    --button-primary-hover: #262836;
+    --button-primary-pressed: #15161e;
+    --button-primary-disabled: #edeef2;
+    --button-primary-loading: #edeef2;
+
+    --button-text-primary: #f6f6f9;
+    --button-text-primary-hover: #f6f6f9;
+    --button-text-primary-pressed: #edeef2;
+    --button-text-primary-disabled: #9fa3bc;
   }
 }
 
