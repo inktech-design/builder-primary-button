@@ -9,11 +9,11 @@ const buttonVariants = cva(
     variants: {
       state: {
         default:
-          "bg-button-primary text-button-text-primary hover:bg-button-primary-hover hover:text-button-text-primary-hover hover:scale-105 hover:shadow-lg active:bg-button-primary-pressed active:text-button-text-primary-pressed active:scale-95",
+          "bg-button-primary text-button-text-primary hover:bg-button-primary-hover hover:text-button-text-primary-hover hover:shadow-lg active:bg-button-primary-pressed active:text-button-text-primary-pressed",
         hover:
-          "bg-button-primary-hover text-button-text-primary-hover scale-105 shadow-lg",
+          "bg-button-primary-hover text-button-text-primary-hover shadow-lg",
         pressed:
-          "bg-button-primary-pressed text-button-text-primary-pressed scale-95 shadow-md",
+          "bg-button-primary-pressed text-button-text-primary-pressed shadow-md",
         disabled:
           "bg-button-primary-disabled text-button-text-primary-disabled opacity-60 cursor-not-allowed",
         loading:
