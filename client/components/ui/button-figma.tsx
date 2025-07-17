@@ -3,26 +3,21 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none font-inter",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none font-inter h-14 min-w-14 px-3 py-4 rounded-2xl",
   {
     variants: {
-      variant: {
-        primary: "h-14 min-w-14 px-3 py-4 rounded-2xl transition-colors",
-      },
       state: {
         default:
-          "bg-button-primary text-button-text-primary hover:bg-button-primary-hover hover:text-button-text-primary-hover",
+          "bg-button-primary text-button-text-primary hover:bg-button-primary-hover hover:text-button-text-primary-hover active:bg-button-primary-pressed active:text-button-text-primary-pressed",
         hover: "bg-button-primary-hover text-button-text-primary-hover",
-        pressed:
-          "bg-button-primary-pressed text-button-text-primary-pressed active:bg-button-primary-pressed active:text-button-text-primary-pressed",
+        pressed: "bg-button-primary-pressed text-button-text-primary-pressed",
         disabled:
-          "bg-button-primary-disabled text-button-text-primary-disabled disabled:bg-button-primary-disabled disabled:text-button-text-primary-disabled",
+          "bg-button-primary-disabled text-button-text-primary-disabled",
         loading:
           "bg-button-primary-loading text-button-text-primary-disabled cursor-wait",
       },
     },
     defaultVariants: {
-      variant: "primary",
       state: "default",
     },
   },
