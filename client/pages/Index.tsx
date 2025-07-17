@@ -22,9 +22,9 @@ export default function Index() {
             Pixel Perfect
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-2">
-            A modern button component system with smooth transition animations.
-            Experience all button states with perfect pixel precision and fluid
-            animations.
+            A modern button component with iOS-style smooth corners and fluid
+            animations. Experience perfect pixel precision with natural,
+            squircle-shaped borders.
           </p>
         </div>
 
