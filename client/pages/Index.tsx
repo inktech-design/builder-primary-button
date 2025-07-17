@@ -153,10 +153,10 @@ export default function Index() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
               <div className="bg-card p-6 rounded-lg border text-center">
-                <h3 className="font-semibold mb-3">Hover Scale</h3>
+                <h3 className="font-semibold mb-3">Hover Effects</h3>
                 <Button>Hover Me</Button>
                 <p className="text-xs text-muted-foreground mt-2">
-                  105% scale on hover
+                  Color & shadow on hover
                 </p>
               </div>
 
@@ -164,7 +164,7 @@ export default function Index() {
                 <h3 className="font-semibold mb-3">Active Press</h3>
                 <Button>Press Me</Button>
                 <p className="text-xs text-muted-foreground mt-2">
-                  95% scale when pressed
+                  Pressed state colors
                 </p>
               </div>
 
