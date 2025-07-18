@@ -116,32 +116,41 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             className,
           )}
         >
-          {/* Left Icon */}
-          {leftIcon && !iconOnly && (
-            <div className="transition-all duration-300 ease-out">
-              {loading ? <LoadingSpinner /> : <PlusIcon />}
+          {/* Loading Only Mode - Centered Spinner */}
+          {loadingOnly ? (
+            <div className="flex items-center justify-center transition-all duration-300 ease-out">
+              <LoadingSpinner />
             </div>
-          )}
+          ) : (
+            <>
+              {/* Left Icon */}
+              {leftIcon && !iconOnly && (
+                <div className="transition-all duration-300 ease-out">
+                  {loading ? <LoadingSpinner /> : <PlusIcon />}
+                </div>
+              )}
 
-          {/* Content */}
-          {!iconOnly && (
-            <span className="px-1 sm:px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6 transition-all duration-300 ease-out">
-              {children}
-            </span>
-          )}
+              {/* Content */}
+              {!iconOnly && (
+                <span className="px-1 sm:px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6 transition-all duration-300 ease-out">
+                  {children}
+                </span>
+              )}
 
-          {/* Right Icon */}
-          {rightIcon && !iconOnly && (
-            <div className="transition-all duration-300 ease-out">
-              {loading ? null : <PlusIcon />}
-            </div>
-          )}
+              {/* Right Icon */}
+              {rightIcon && !iconOnly && (
+                <div className="transition-all duration-300 ease-out">
+                  {loading ? null : <PlusIcon />}
+                </div>
+              )}
 
-          {/* Icon Only Mode */}
-          {iconOnly && (
-            <div className="transition-all duration-300 ease-out">
-              {loading ? <LoadingSpinner /> : <PlusIcon />}
-            </div>
+              {/* Icon Only Mode */}
+              {iconOnly && (
+                <div className="transition-all duration-300 ease-out">
+                  {loading ? <LoadingSpinner /> : <PlusIcon />}
+                </div>
+              )}
+            </>
           )}
         </Squircle>
       </button>
