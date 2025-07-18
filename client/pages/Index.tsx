@@ -107,6 +107,7 @@ export default function Index() {
                   rightIcon={true}
                   loading={loadingStates.rightIcon}
                   onClick={() => handleButtonClick("rightIcon")}
+                  className="w-[139px]"
                 >
                   Continue
                 </Button>
