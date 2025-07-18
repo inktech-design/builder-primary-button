@@ -84,7 +84,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       className,
       state,
       loading = false,
-      loadingOnly = false,
       leftIcon = true,
       rightIcon = true,
       iconOnly = false,
