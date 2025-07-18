@@ -169,7 +169,7 @@ export default function Index() {
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
               Animation Features
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mb-12">
               <div className="bg-card p-6 rounded-lg border text-center">
                 <h3 className="font-semibold mb-3">Hover Effects</h3>
                 <Button>Hover Me</Button>
