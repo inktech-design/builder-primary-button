@@ -73,7 +73,6 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   loading?: boolean;
-  loadingOnly?: boolean;
   leftIcon?: boolean;
   rightIcon?: boolean;
   iconOnly?: boolean;
