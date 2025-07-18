@@ -131,7 +131,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
               {/* Content */}
               {!iconOnly && (
-                <span className="px-2 text-sm sm:text-base font-medium leading-5 sm:leading-6 transition-all duration-300 ease-out">
+                <span className="text-sm sm:text-base font-medium leading-5 sm:leading-6 transition-all duration-300 ease-out">
                   {children}
                 </span>
               )}
