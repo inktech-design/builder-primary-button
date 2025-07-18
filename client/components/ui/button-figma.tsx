@@ -111,7 +111,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className={cn(
             buttonVariants({ state: finalState }),
             "w-full h-full",
-            loadingOnly && "min-w-[139px]",
+            isLoadingOnly && "min-w-[139px]",
             className,
           )}
         >
