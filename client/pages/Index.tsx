@@ -195,6 +195,14 @@ export default function Index() {
               </div>
 
               <div className="bg-card p-6 rounded-lg border text-center">
+                <h3 className="font-semibold mb-3">Loading Only</h3>
+                <Button loadingOnly>Load</Button>
+                <p className="text-xs text-muted-foreground mt-2">
+                  Centered spinner, no label
+                </p>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border text-center">
                 <h3 className="font-semibold mb-3">Smooth Corners</h3>
                 <Button>iOS-Style</Button>
                 <p className="text-xs text-muted-foreground mt-2">
