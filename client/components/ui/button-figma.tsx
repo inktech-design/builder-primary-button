@@ -116,7 +116,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           )}
         >
           {/* Loading Only Mode - Centered Spinner */}
-          {loadingOnly ? (
+          {isLoadingOnly ? (
             <div className="flex items-center justify-center transition-all duration-300 ease-out w-full min-w-[139px]">
               <LoadingSpinner />
             </div>
