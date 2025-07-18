@@ -65,7 +65,7 @@ export default function Index() {
               </div>
 
               <div className="text-center space-y-3">
-                <Button loadingOnly>Button</Button>
+                <Button loading></Button>
                 <p className="text-sm text-muted-foreground">Loading Only</p>
               </div>
             </div>
