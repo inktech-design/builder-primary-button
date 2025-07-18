@@ -84,7 +84,7 @@ export default function Index() {
                   rightIcon={true}
                   loading={loadingStates.standard}
                   onClick={() => handleButtonClick("standard")}
-                  className="w-[139px]"
+                  className={loadingStates.standard ? "w-[139px]" : ""}
                 >
                   Click Me
                 </Button>
