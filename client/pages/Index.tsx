@@ -40,32 +40,42 @@ export default function Index() {
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 items-center">
               <div className="text-center space-y-3">
-                <Button state="default">Button</Button>
+                <Button state="default" className="w-[139px]">
+                  Button
+                </Button>
                 <p className="text-sm text-muted-foreground">Default</p>
               </div>
 
               <div className="text-center space-y-3">
-                <Button state="hover">Button</Button>
+                <Button state="hover" className="w-[139px]">
+                  Button
+                </Button>
                 <p className="text-sm text-muted-foreground">Hover</p>
               </div>
 
               <div className="text-center space-y-3">
-                <Button state="pressed">Button</Button>
+                <Button state="pressed" className="w-[139px]">
+                  Button
+                </Button>
                 <p className="text-sm text-muted-foreground">Pressed</p>
               </div>
 
               <div className="text-center space-y-3">
-                <Button disabled>Button</Button>
+                <Button disabled className="w-[139px]">
+                  Button
+                </Button>
                 <p className="text-sm text-muted-foreground">Disabled</p>
               </div>
 
               <div className="text-center space-y-3">
-                <Button loading>Button</Button>
+                <Button loading className="w-[139px]">
+                  Button
+                </Button>
                 <p className="text-sm text-muted-foreground">Loading</p>
               </div>
 
               <div className="text-center space-y-3">
-                <Button loading></Button>
+                <Button loading className="w-[139px]"></Button>
                 <p className="text-sm text-muted-foreground">Loading Only</p>
               </div>
             </div>
