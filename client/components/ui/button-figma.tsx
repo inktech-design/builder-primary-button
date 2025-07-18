@@ -103,7 +103,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         className="relative overflow-hidden focus:outline-none"
         ref={ref}
-        disabled={disabled || loading}
+        disabled={disabled || loading || loadingOnly}
         style={style}
         {...props}
       >
