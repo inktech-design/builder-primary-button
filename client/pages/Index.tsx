@@ -63,6 +63,11 @@ export default function Index() {
                 <Button loading>Button</Button>
                 <p className="text-sm text-muted-foreground">Loading</p>
               </div>
+
+              <div className="text-center space-y-3">
+                <Button loadingOnly>Button</Button>
+                <p className="text-sm text-muted-foreground">Loading Only</p>
+              </div>
             </div>
           </section>
 
