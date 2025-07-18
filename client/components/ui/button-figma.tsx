@@ -96,7 +96,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref,
   ) => {
-    const finalState = loading ? "loading" : disabled ? "disabled" : state;
+    const finalState =
+      loading || loadingOnly ? "loading" : disabled ? "disabled" : state;
 
     return (
       <button
