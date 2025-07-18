@@ -136,14 +136,6 @@ export default function Index() {
               </div>
 
               <div className="bg-card p-6 rounded-lg border">
-                <h3 className="font-semibold mb-4">Loading Only</h3>
-                <Button
-                  loading={loadingStates.loadingOnly}
-                  onClick={() => handleButtonClick("loadingOnly")}
-                ></Button>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg border">
                 <h3 className="font-semibold mb-4">Disabled</h3>
                 <Button disabled>Disabled</Button>
               </div>
