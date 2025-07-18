@@ -38,7 +38,7 @@ export default function Index() {
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
               Button States
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 items-center">
               <div className="text-center space-y-3">
                 <Button state="default">Button</Button>
                 <p className="text-sm text-muted-foreground">Default</p>
