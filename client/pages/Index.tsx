@@ -80,6 +80,8 @@ export default function Index() {
               <div className="bg-card p-6 rounded-lg border">
                 <h3 className="font-semibold mb-4">Standard Button</h3>
                 <Button
+                  leftIcon={true}
+                  rightIcon={true}
                   loading={loadingStates.standard}
                   onClick={() => handleButtonClick("standard")}
                   className="w-[139px]"
