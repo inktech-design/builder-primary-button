@@ -25,10 +25,15 @@ export default function Index() {
             </div>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-2">
-            Button component with iOS-style smooth corners and fluid animations.{" "}
-            <a href="https://github.com/inktech-design/builder-primary-button">
-              GitHub repository
-            </a>
+            <span>
+              Button component with iOS-style smooth corners and fluid
+              animations.&nbsp;
+            </span>
+            <span className="text-blue-500 text-xl">
+              <a href="https://github.com/inktech-design/builder-primary-button">
+                Repository
+              </a>
+            </span>
           </p>
         </div>
 
