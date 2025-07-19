@@ -93,7 +93,7 @@ export default function Index() {
               Interactive Examples
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              <div className="bg-card p-6 rounded-lg border">
+              <div className="bg-card py-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Standard Button</h3>
                 <Button
                   leftIcon={true}
