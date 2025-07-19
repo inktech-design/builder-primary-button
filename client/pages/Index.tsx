@@ -25,9 +25,10 @@ export default function Index() {
             </div>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-2">
-            A modern button component with iOS-style smooth corners and fluid
-            animations. Experience perfect pixel precision with natural,
-            squircle-shaped borders.
+            Button component with iOS-style smooth corners and fluid animations.{" "}
+            <a href="https://github.com/inktech-design/builder-primary-button">
+              GitHub repository
+            </a>
           </p>
         </div>
 
