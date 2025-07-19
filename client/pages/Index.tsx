@@ -174,7 +174,7 @@ export default function Index() {
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border text-center">
+              <div className="bg-card p-6 rounded-lg text-center">
                 <h3 className="font-semibold mb-3">Active Press</h3>
                 <Button>Press Me</Button>
                 <p className="text-xs text-muted-foreground mt-2">
@@ -182,7 +182,7 @@ export default function Index() {
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border text-center">
+              <div className="bg-card p-6 rounded-lg text-center">
                 <h3 className="font-semibold mb-3">Smooth Loading</h3>
                 <Button loading>Loading</Button>
                 <p className="text-xs text-muted-foreground mt-2">
@@ -190,7 +190,7 @@ export default function Index() {
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border text-center">
+              <div className="bg-card p-6 rounded-lg text-center">
                 <h3 className="font-semibold mb-3">Loading Only</h3>
                 <Button loading></Button>
                 <p className="text-xs text-muted-foreground mt-2">
@@ -198,7 +198,7 @@ export default function Index() {
                 </p>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border text-center">
+              <div className="bg-card p-6 rounded-lg text-center">
                 <h3 className="font-semibold mb-3">Smooth Corners</h3>
                 <Button>iOS-Style</Button>
                 <p className="text-xs text-muted-foreground mt-2">
