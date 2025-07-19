@@ -152,7 +152,6 @@ export default function Index() {
                   loading={loadingStates.leftIcon}
                   onClick={() => handleButtonClick("leftIcon")}
                   className="w-[139px]"
-                  style={{ paddingLeft: "12px", paddingRight: "16px" }}
                 >
                   Add Item
                 </Button>
