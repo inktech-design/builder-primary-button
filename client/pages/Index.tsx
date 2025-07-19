@@ -25,11 +25,14 @@ export default function Index() {
             </div>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-2">
-            <span>
+            <span style={{ fontSize: "16px" }}>
               Button component with iOS-style smooth corners and fluid
               animations.&nbsp;
             </span>
-            <span className="text-blue-500 text-xl">
+            <span
+              className="text-blue-500 text-xl"
+              style={{ fontSize: "16px" }}
+            >
               <a href="https://github.com/inktech-design/builder-primary-button">
                 Repository
               </a>
@@ -308,7 +311,7 @@ export default function Index() {
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
               Design Specifications
             </h2>
-            <div className="bg-card rounded-lg border">
+            <div>
               <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-sm">
                 <div>
                   <dt className="font-semibold text-foreground">Height</dt>
