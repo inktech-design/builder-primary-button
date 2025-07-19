@@ -151,6 +151,7 @@ export default function Index() {
                   rightIcon={false}
                   loading={loadingStates.leftIcon}
                   onClick={() => handleButtonClick("leftIcon")}
+                  style={{ paddingLeft: "8px", paddingRight: "12px" }}
                 >
                   Add Item
                 </Button>
@@ -169,6 +170,7 @@ export default function Index() {
                   loading={loadingStates.rightIcon}
                   onClick={() => handleButtonClick("rightIcon")}
                   className="w-[139px]"
+                  style={{ paddingLeft: "12px", paddingRight: "8px" }}
                 >
                   Continue
                 </Button>
