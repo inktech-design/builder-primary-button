@@ -160,20 +160,6 @@ export default function Index() {
             </div>
           </section>
 
-          {/* Size Variations */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-6 text-foreground">
-              Responsive Design
-            </h2>
-            <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 items-center">
-                <Button className="w-auto">Auto Width</Button>
-                <Button className="w-32">Fixed Width</Button>
-                <Button className="w-full max-w-sm">Responsive Width</Button>
-              </div>
-            </div>
-          </section>
-
           {/* Animation Showcase */}
           <section>
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
