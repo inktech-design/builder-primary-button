@@ -139,7 +139,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               {/* Right Icon */}
               {rightIcon && !iconOnly && (
                 <div className="transition-all duration-300 ease-out">
-                  {loading ? null : <PlusIcon />}
+                  {loading ? <LoadingSpinner /> : <PlusIcon />}
                 </div>
               )}
 
