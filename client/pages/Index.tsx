@@ -106,7 +106,7 @@ export default function Index() {
                 </Button>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border">
+              <div className="bg-card py-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Left Icon Only</h3>
                 <Button
                   leftIcon={true}
@@ -118,7 +118,7 @@ export default function Index() {
                 </Button>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border">
+              <div className="bg-card py-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Right Icon Only</h3>
                 <Button
                   leftIcon={false}
@@ -131,7 +131,7 @@ export default function Index() {
                 </Button>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border">
+              <div className="bg-card py-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Icon Only</h3>
                 <Button
                   iconOnly={true}
@@ -141,7 +141,7 @@ export default function Index() {
                 />
               </div>
 
-              <div className="bg-card p-6 rounded-lg border">
+              <div className="bg-card py-6 rounded-lg">
                 <h3 className="font-semibold mb-4">No Icons</h3>
                 <Button
                   leftIcon={false}
@@ -153,7 +153,7 @@ export default function Index() {
                 </Button>
               </div>
 
-              <div className="bg-card p-6 rounded-lg border">
+              <div className="bg-card py-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Disabled</h3>
                 <Button disabled>Disabled</Button>
               </div>
